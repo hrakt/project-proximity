@@ -14,3 +14,47 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.pin-icon {
+  width: 50px;
+  height: 50px;
+  transform-origin: -50px -50px;
+}
+
+.selector-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.selector {
+  margin-right: 13px;
+  background: cornsilk;
+}
+
+.selector:hover {
+  background: darkgray;
+}
+
+.list {
+  height: 600px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list-item {
+  outline: solid;
+  width: 500px;
+  height: 100px;
+  margin-bottom: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
+a {
+  cursor: pointer;
+}
