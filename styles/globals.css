@@ -52,7 +52,12 @@ a {
   height: 100px;
   margin-bottom: 25px;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background: ghostwhite;
 }
 
 a {
