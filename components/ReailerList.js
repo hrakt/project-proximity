@@ -1,7 +1,8 @@
 const list = [
   {
     name: "Stizzy DTLA",
-    address: "728 E Commercial St",
+    address: "728 ",
+    street: "E Commercial St",
     city: "Los Angeles",
     state: "CA",
     zip: "90012",
@@ -10,7 +11,8 @@ const list = [
   },
   {
     name: "MedMen Los Angeles - DTLA",
-    address: "735 S Broadway,",
+    address: "735 ",
+    street: "S Broadway",
     city: "Los Angeles",
     state: "CA",
     zip: "90014",
@@ -19,7 +21,8 @@ const list = [
   },
   {
     name: "Cookies Melrose",
-    address: "8360 Melrose Ave",
+    address: "8360 ",
+    street: "Melrose Ave",
     city: "Los Angeles",
     state: "CA",
     zip: "90069",

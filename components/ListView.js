@@ -8,7 +8,8 @@ const ListView = () => {
           <div key={key} className="list-item">
             <p>{item.name}</p>
             <p>
-              {item.address}, {item.city}, {item.state}, {item.zip}
+              {item.address} {item.street}, {item.city}, {item.state},{" "}
+              {item.zip}
             </p>
           </div>
         );
