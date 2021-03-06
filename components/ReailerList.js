@@ -1,7 +1,7 @@
 const list = [
   {
     name: "Stizzy DTLA",
-    address: "728 ",
+    address: "728",
     street: "E Commercial St",
     city: "Los Angeles",
     state: "CA",
@@ -11,7 +11,7 @@ const list = [
   },
   {
     name: "MedMen Los Angeles - DTLA",
-    address: "735 ",
+    address: "735",
     street: "S Broadway",
     city: "Los Angeles",
     state: "CA",
@@ -21,13 +21,43 @@ const list = [
   },
   {
     name: "Cookies Melrose",
-    address: "8360 ",
+    address: "8360",
     street: "Melrose Ave",
     city: "Los Angeles",
     state: "CA",
     zip: "90069",
     lat: "34.083630",
     lng: "-118.372499",
+  },
+  {
+    name: "HiKei",
+    address: "3940",
+    street: "Home Ave",
+    city: "San Diego,",
+    state: "CA",
+    zip: "92105",
+    lat: "32.720371",
+    lng: "-117.110260",
+  },
+  {
+    name: "March and Ash",
+    address: "2835",
+    street: "Camino del Rio S",
+    city: "San Diego",
+    state: "CA",
+    zip: "92108",
+    lat: "32.769798",
+    lng: "-117.132874",
+  },
+  {
+    name: "Golden State Greens Point Loma",
+    address: "3452",
+    street: "Hancock St",
+    city: "San Diego",
+    state: "CA",
+    zip: "92110",
+    lat: "32.756264",
+    lng: "-117.208252",
   },
 ];
 
