@@ -2,7 +2,7 @@ import list from "./ReailerList";
 import zipcodes from "zipcodes";
 import { useEffect } from "react";
 
-const ListView = ({ zipCode, radius }) => {
+const ListView = ({ zipCode, radius, setRetailerCount }) => {
   const returnLink = (item) => {
     return `https://www.google.com/maps/dir/?api=1&destination=${item.address}%20${item.street}%20${item.city}%2C%20${item.state}%20US%20${item.zip}`;
   };
@@ -26,7 +26,10 @@ const ListView = ({ zipCode, radius }) => {
             );
           }
         })
-      : (filteredList = <div class="list-error">No retailers nearby</div>);
+      : null;
+    filteredList.length > 0
+      ? setRetailerCount(filteredList.length)
+      : filteredList.push(<div>No retailers found nearby</div>);
     return filteredList;
   };
 

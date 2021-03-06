@@ -33,7 +33,7 @@ const list = [
     name: "HiKei",
     address: "3940",
     street: "Home Ave",
-    city: "San Diego,",
+    city: "San Diego",
     state: "CA",
     zip: "92105",
     lat: "32.720371",
