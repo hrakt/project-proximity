@@ -59,6 +59,16 @@ const list = [
     lat: "32.756264",
     lng: "-117.208252",
   },
+  {
+    name: "Golden State Greens Point Loma",
+    address: "3452",
+    street: "Hancock St",
+    city: "Irvine",
+    state: "CA",
+    zip: "92602",
+    lat: "32.756264",
+    lng: "-117.208252",
+  },
 ];
 
 export default list;

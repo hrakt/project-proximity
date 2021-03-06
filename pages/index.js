@@ -9,6 +9,7 @@ import ListView from "../components/ListView";
 
 export default function Home() {
   const [zipCode, setZipCode] = useState("");
+  const [radius, setRadius] = useState(10);
   const [viewSelector, setViewSelector] = useState("list");
   const [retailerCount, setRetailerCount] = useState(0);
 
@@ -21,11 +22,15 @@ export default function Home() {
       <main className={styles.main}>
         <ViewSelector setViewSelector={setViewSelector} />
         <ZipField setZipCode={setZipCode} />
-        <Retailer retailerCount={retailerCount} zipCode={zipCode} />
+        <Retailer
+          retailerCount={retailerCount}
+          zipCode={zipCode}
+          setRadius={setRadius}
+        />
         {viewSelector === "list" ? (
           <ListView
             zipCode={zipCode}
-            radius={50}
+            radius={radius}
             setRetailerCount={setRetailerCount}
           />
         ) : null}

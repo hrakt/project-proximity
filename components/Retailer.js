@@ -1,7 +1,16 @@
-const Retailer = ({ retailerCount, zipCode }) => {
+const Retailer = ({ retailerCount, zipCode, setRadius }) => {
+  const handleChange = (e) => {
+    setRadius(e.target.value);
+  };
   return (
     <div>
-      {retailerCount} retailers near {zipCode}
+      <span>{retailerCount} retailers</span>
+      <select onChange={handleChange} class="select">
+        <option>10</option>
+        <option>25</option>
+        <option>50</option>
+      </select>
+      <span>miles nears {zipCode}</span>
     </div>
   );
 };
