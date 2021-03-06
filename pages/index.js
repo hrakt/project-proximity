@@ -21,7 +21,9 @@ export default function Home() {
         <ViewSelector setViewSelector={setViewSelector} />
         <ZipField setZipCode={setZipCode} />
         <Retailer zipCode={zipCode} />
-        {viewSelector === "list" ? <ListView /> : null}
+        {viewSelector === "list" ? (
+          <ListView zipCode={zipCode} radius={50} />
+        ) : null}
         {viewSelector === "map" ? <Map /> : null}
       </main>
 
