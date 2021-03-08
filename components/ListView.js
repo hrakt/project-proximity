@@ -1,6 +1,5 @@
 import list from "./ReailerList";
 import zipcodes from "zipcodes";
-import { useEffect } from "react";
 
 const ListView = ({ zipCode, radius, setRetailerCount }) => {
   const returnLink = (item) => {
