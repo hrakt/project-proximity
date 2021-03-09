@@ -10,9 +10,10 @@ const Retailer = ({ retailerCount, zipCode, setRadius }) => {
       </div>
     );
   };
+
   return (
     <div>
-      {zipCode === undefined ? (
+      {zipCode !== "" ? (
         <>
           <span>{retailerCount} retailers</span>
           <select onChange={handleChange} class="select">
