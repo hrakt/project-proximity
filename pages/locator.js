@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import DefaultLayout from "../layouts/DefaultLayout";
 import Retailer from "../components/Locator/Retailer";
 import ZipField from "../components/Locator/ZipField";
 import ViewSelector from "../components/Locator/ViewSelector";
@@ -14,22 +16,24 @@ export default function Locator() {
   const [retailerCount, setRetailerCount] = useState(0);
 
   return (
-    <div className={styles.locator}>
-      <ViewSelector setViewSelector={setViewSelector} />
-      <ZipField setZipCode={setZipCode} />
-      <Retailer
-        retailerCount={retailerCount}
-        zipCode={zipCode}
-        setRadius={setRadius}
-      />
-      {viewSelector === "list" ? (
-        <ListView
+    <DefaultLayout>
+      <div className={styles.locator}>
+        <ViewSelector setViewSelector={setViewSelector} />
+        <ZipField setZipCode={setZipCode} />
+        <Retailer
+          retailerCount={retailerCount}
           zipCode={zipCode}
-          radius={radius}
-          setRetailerCount={setRetailerCount}
+          setRadius={setRadius}
         />
-      ) : null}
-      {viewSelector === "map" ? <Map /> : null}
-    </div>
+        {viewSelector === "list" ? (
+          <ListView
+            zipCode={zipCode}
+            radius={radius}
+            setRetailerCount={setRetailerCount}
+          />
+        ) : null}
+        {viewSelector === "map" ? <Map /> : null}
+      </div>
+    </DefaultLayout>
   );
 }
