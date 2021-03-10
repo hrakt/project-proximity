@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const Nav = () => {
   const menuOptions = [
-    { title: "About", href: "//about" },
-    { title: "Products", href: "//products" },
-    { title: "News", href: "//news" },
-    { title: "Contact", href: "//contact" },
+    { title: "About", href: "/about" },
+    { title: "Products", href: "/products" },
+    { title: "News", href: "/news" },
+    { title: "Contact", href: "/contact" },
   ];
 
   return (
