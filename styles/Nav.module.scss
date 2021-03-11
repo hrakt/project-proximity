@@ -10,6 +10,7 @@
 
 .navItems {
   display: flex;
+  align-items: center;
 }
 
 .navItem {
@@ -32,4 +33,8 @@
     visibility: visible;
     transform: scaleX(1);
   }
+}
+
+.logoWrapper {
+  padding-right: 1rem;
 }
