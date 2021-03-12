@@ -15,15 +15,21 @@ const Nav = () => {
     <nav className={styles.nav}>
       <div className={styles.navContainer}>
         <div className={styles.socialIcons}>
-          <SvgIcon icon="Facebook" className={styles.icon} />
-          <SvgIcon icon="Instagram" className={styles.icon} />
+          <a href="//www.facebook.com">
+            <SvgIcon icon="Facebook" className={styles.icon} />
+          </a>
+          <a href={"//www.instagram.com"}>
+            <SvgIcon icon="Instagram" className={styles.icon} />
+          </a>
         </div>
         <ul className={styles.navItems}>
           {menuOptions.map((item, key) => {
             return (
               <React.Fragment>
                 {key === 2 ? (
-                  <SvgIcon icon="Logo" className={styles.logo} />
+                  <a href={"/"}>
+                    <SvgIcon icon="Logo" className={styles.logo} />
+                  </a>
                 ) : null}
                 <li key={key} className={styles.navItem}>
                   <Link href={item.href}>{item.title}</Link>
@@ -33,8 +39,12 @@ const Nav = () => {
           })}
         </ul>
         <div className={styles.socialIcons}>
-          <SvgIcon icon="Delivery" className={styles.icon} />
-          <SvgIcon icon="Location" className={styles.icon} />
+          <a href="/delivery">
+            <SvgIcon icon="Delivery" className={styles.icon} />
+          </a>
+          <a href="/locator">
+            <SvgIcon icon="Location" className={styles.icon} />
+          </a>
         </div>
       </div>
     </nav>
