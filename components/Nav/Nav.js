@@ -33,8 +33,8 @@ const Nav = () => {
           })}
         </ul>
         <div className={styles.socialIcons}>
-          <SvgIcon icon="Facebook" className={styles.icon} />
-          <SvgIcon icon="Instagram" className={styles.icon} />
+          <SvgIcon icon="Delivery" className={styles.icon} />
+          <SvgIcon icon="Location" className={styles.icon} />
         </div>
       </div>
     </nav>
