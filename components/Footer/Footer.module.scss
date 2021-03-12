@@ -1,27 +1,32 @@
 @import "styles/colors.scss";
+@import "styles/breakpoints.scss";
 
 .footer {
   background-color: $offwhite;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.6rem;
-  padding: 8rem 3rem 1rem 8rem;
+  flex-direction: column;
+  margin-top: 10rem;
+  padding: 4rem 0;
 }
 
 .logo {
   height: 6rem;
+  margin-bottom: 1rem;
 }
 
 .links {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .link {
-  margin-right: 1.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .socialIcons {
@@ -33,4 +38,24 @@
   height: 2.5rem;
   width: 2.5rem;
   margin: 0 1rem;
+}
+
+@include tablet {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .links {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .link {
+    margin-right: 1rem;
+  }
 }

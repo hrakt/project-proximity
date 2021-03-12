@@ -1,12 +1,13 @@
 @import "styles/colors.scss";
 
 .nav {
-  height: 16rem;
+  height: 14rem;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  box-shadow: 0 8px 12px 0 rgb(40 133 246 / 8%);
 }
 
 .navItems {
@@ -25,8 +26,8 @@
 
 .navItem {
   margin-right: 3rem;
-
   position: relative;
+
   &:before {
     content: "";
     position: absolute;

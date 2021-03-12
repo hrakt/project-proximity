@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Recursive, sans-serif;
-  font-size: 62.5%;
+  font-size: 10px;
 }
 
 a {
@@ -24,7 +24,11 @@ li {
   margin: 0;
 }
 
-.pin-icon {
+main {
+  height: 100vh;
+  width: 100vw;
+}
+/* .pin-icon {
   width: 50px;
   height: 50px;
   transform-origin: -50px -50px;
@@ -66,7 +70,7 @@ li {
 
 .list-item:hover {
   background: ghostwhite;
-}
+} */
 
 a {
   cursor: pointer;

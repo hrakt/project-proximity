@@ -23,7 +23,6 @@ const Footer = () => {
         })}
       </ul>
       <div className={styles.socialIcons}>
-        Find us:
         <a href="//www.facebook.com">
           <SvgIcon icon="Facebook" className={styles.icon} />
         </a>
