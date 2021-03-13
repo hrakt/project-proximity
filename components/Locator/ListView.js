@@ -1,4 +1,5 @@
 import list from "./ReailerList";
+import styles from "./Locator.module.scss";
 import zipcodes from "zipcodes";
 
 const ListView = ({ zipCode, radius, setRetailerCount }) => {
@@ -12,10 +13,10 @@ const ListView = ({ zipCode, radius, setRetailerCount }) => {
       ? list.map((item, key) => {
           if (zipcodes.distance(zip, item.zip) <= radius) {
             filteredList.push(
-              <div key={key} className="list-item">
+              <div key={key} className={styles.listItem}>
                 <a href={returnLink(item)}>
-                  <p>{item.name}</p>
-                  <p>
+                  <p className={styles.locationName}>{item.name}</p>
+                  <p className={styles.address}>
                     {item.address} {item.street}, {item.city}, {item.state},{" "}
                     {item.zip}
                   </p>
@@ -35,10 +36,10 @@ const ListView = ({ zipCode, radius, setRetailerCount }) => {
     let renderList = [];
     list.map((item, key) => {
       renderList.push(
-        <div key={key} className="list-item">
+        <div key={key} className={styles.listItem}>
           <a href={returnLink(item)}>
-            <p>{item.name}</p>
-            <p>
+            <p className={styles.locationName}>{item.name}</p>
+            <p className={styles.address}>
               {item.address} {item.street}, {item.city}, {item.state},{" "}
               {item.zip}
             </p>
@@ -57,7 +58,7 @@ const ListView = ({ zipCode, radius, setRetailerCount }) => {
     return filteredList;
   };
 
-  return <div className="list">{renderList(zipCode)}</div>;
+  return <div className={styles.list}>{renderList(zipCode)}</div>;
 };
 
 export default ListView;

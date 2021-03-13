@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 import DefaultLayout from "../layouts/DefaultLayout";
-import Retailer from "../components/Locator/Retailer";
+import RetailerCount from "../components/Locator/RetailerCount";
 import ZipField from "../components/Locator/ZipField";
 import ViewSelector from "../components/Locator/ViewSelector";
 import Map from "../components/Locator/Map";
 import ListView from "../components/Locator/ListView";
 
-import styles from "../styles/Locator.module.scss";
+import styles from "../components/Locator/Locator.module.scss";
 
 export default function Locator() {
   const [zipCode, setZipCode] = useState("");
@@ -19,12 +19,12 @@ export default function Locator() {
     <DefaultLayout>
       <div className={styles.locator}>
         <ViewSelector setViewSelector={setViewSelector} />
-        <ZipField setZipCode={setZipCode} />
-        <Retailer
+        <RetailerCount
           retailerCount={retailerCount}
           zipCode={zipCode}
           setRadius={setRadius}
         />
+        <ZipField setZipCode={setZipCode} />
         {viewSelector === "list" ? (
           <ListView
             zipCode={zipCode}

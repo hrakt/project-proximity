@@ -1,14 +1,15 @@
-import { useState } from "react";
+import styles from "./Locator.module.scss";
 
 const ViewSelector = ({ setViewSelector }) => {
   return (
-    <div className="selector-wrapper">
-      <a className="selector" onClick={() => setViewSelector("list")}>
+    <div className={styles.selectorWrapper}>
+      {/* <a className={styles.selector} onClick={() => setViewSelector("list")}>
         List
       </a>
-      <a className="selector" onClick={() => setViewSelector("map")}>
+      <a className={styles.selector} onClick={() => setViewSelector("map")}>
         Map
-      </a>
+      </a> */}
+      <span>Find our products near you</span>
     </div>
   );
 };

@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600&display=swap");
 
 html,
-body {
+body,
+p {
   padding: 0;
   margin: 0;
   font-family: Recursive, sans-serif;
   font-size: 10px;
-  overflow: visible;
+  color: #333332;
 }
 
 a {

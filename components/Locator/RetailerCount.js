@@ -1,4 +1,4 @@
-const Retailer = ({ retailerCount, zipCode, setRadius }) => {
+const RetailerCount = ({ retailerCount, zipCode, setRadius }) => {
   const handleChange = (e) => {
     setRadius(e.target.value);
   };
@@ -30,4 +30,4 @@ const Retailer = ({ retailerCount, zipCode, setRadius }) => {
   );
 };
 
-export default Retailer;
+export default RetailerCount;
