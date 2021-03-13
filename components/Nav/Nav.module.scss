@@ -62,6 +62,14 @@
   margin-bottom: 14rem;
 }
 
+.hamburgerIcons {
+  display: flex;
+
+  .icon {
+    margin: 0 1rem;
+  }
+}
+
 .center {
   width: 40px;
   position: absolute;
@@ -98,6 +106,10 @@
     opacity: 0.5;
     transition: all 0.2s;
   }
+}
+
+.bodyScroll {
+  overflow-y: hidden;
 }
 
 .menu {
@@ -153,5 +165,11 @@
   }
   .navItem {
     display: initial;
+  }
+  .middle .logo {
+    margin-right: 3rem;
+  }
+  .icon {
+    margin: 0 1rem;
   }
 }

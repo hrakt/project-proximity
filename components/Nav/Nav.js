@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cx from "classnames";
 import styles from "./Nav.module.scss";
 import Link from "next/link";
@@ -10,6 +10,11 @@ const Nav = () => {
   const handleClick = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    if (menuOpen) document.body.style.overflow = "hidden";
+    if (!menuOpen) document.body.style.overflow = "unset";
+  }, [menuOpen]);
 
   const menuOptions = [
     { title: "About", href: "/about" },
