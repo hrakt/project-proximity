@@ -11,7 +11,7 @@ const DefaultLayout = ({ children }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      {/* <Nav /> */}
+      <Nav />
       <main>{children}</main>
       <Footer />
     </React.Fragment>
