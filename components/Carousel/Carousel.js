@@ -6,7 +6,7 @@ import styles from "./Carousel.module.scss";
 const Hero = () => {
   return (
     <div className={styles.wrapper}>
-      <Carousel autoPlay>
+      <Carousel autoPlay swipeable showStatus={false}>
         <div>
           <img src="/hero1.jpg" />
         </div>
