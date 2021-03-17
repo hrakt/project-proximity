@@ -6,15 +6,15 @@ import styles from "./Carousel.module.scss";
 const Hero = () => {
   return (
     <div className={styles.wrapper}>
-      <Carousel autoPlay swipeable showStatus={false}>
+      <Carousel autoPlay swipeable showStatus={false} showThumbs={false}>
         <div>
-          <img src="/hero1.jpg" />
+          <img src="/hero1.jpg" className={styles.img} />
         </div>
         <div>
-          <img src="/hero2.jpg" />
+          <img src="/hero2.jpg" className={styles.img} />
         </div>
         <div>
-          <img src="hero3.jpg" />
+          <img src="hero3.jpg" className={styles.img} />
         </div>
       </Carousel>
     </div>
