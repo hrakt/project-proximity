@@ -24,7 +24,7 @@ const Feautred = ({}) => {
   ];
 
   return (
-    <div className={styles.contiainer}>
+    <div className={styles.container}>
       {featuredItems.map((item, key) => {
         let align;
         key % 2 === 0 ? (align = "left") : (align = "right");
@@ -32,7 +32,7 @@ const Feautred = ({}) => {
           <div className={cx(styles.item, styles[`item__${align}`])} key={key}>
             <div className={styles.item__textBox}>
               <div>{item.header}</div>
-              <dibv>{item.body}</dibv>
+              <div>{item.body}</div>
             </div>
             <div className={styles.item__imageBox}>
               <img src={item.img.link} className={styles.item__image} />

@@ -1,0 +1,98 @@
+@import "styles/breakpoints.scss";
+
+.container {
+  font-size: 1.6rem;
+  padding: 9rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  padding-bottom: 7rem;
+
+  &__right {
+    flex-direction: column-reverse;
+  }
+  &__left {
+    flex-direction: column-reverse;
+  }
+  &__image {
+    height: 180px;
+    width: auto;
+  }
+
+  &__textBox {
+    max-width: 30rem;
+    padding: 0 3rem;
+    padding-top: 2rem;
+
+    div {
+      &:nth-of-type(1) {
+        color: grey;
+        font-size: 2.6rem;
+        font-weight: 600;
+      }
+      &:nth-of-type(2) {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+      &:nth-of-type(3) {
+        margin-top: 1.5rem;
+        color: #8c8c8c;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.masonryGrid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+
+  &__column {
+    padding-left: 10px; /* gutter size */
+    background-clip: padding-box;
+  }
+}
+
+@include tablet {
+  .item {
+    &__right {
+      flex-direction: row;
+    }
+    &__left {
+      flex-direction: row-reverse;
+    }
+    &__textBox {
+      padding-top: 0;
+    }
+    &__image {
+      height: 200px;
+    }
+  }
+}
+
+@include desktop {
+  .item {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    &__image {
+      height: 300px;
+    }
+  }
+}
