@@ -1,3 +1,5 @@
+import Button from "../Button/index";
+
 import styles from "./Newsletter.module.scss";
 
 const Newsletter = ({}) => {
@@ -8,12 +10,16 @@ const Newsletter = ({}) => {
   return (
     <div className={styles.container}>
       <span className={styles.header}>{newsletterHeader}</span>
-
-      <div className={styles.inputWrapper}>
-        <input
-          className={styles.emailInput}
-          placeholder="Yor email address"
-        ></input>
+      <div className={styles.wrapper}>
+        <div className={styles.inputWrapper}>
+          <input
+            className={styles.emailInput}
+            placeholder="Yor email address"
+          ></input>
+        </div>
+        <Button theme="grey" className={styles.button}>
+          Subscribe
+        </Button>
       </div>
       <span className={styles.disclaimer}>{disclaimer}</span>
     </div>

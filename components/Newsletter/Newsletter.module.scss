@@ -15,9 +15,18 @@
   font-weight: 600;
 }
 
+.button {
+  width: 100%;
+  margin-top: 1rem;
+  a {
+    text-align: center;
+  }
+}
+
 .inputWrapper {
   border: 2px solid #eaedf1;
 }
+
 .disclaimer {
   font-size: 1.1rem;
   margin-top: 2rem;
@@ -32,4 +41,5 @@
   box-shadow: none;
   outline: none;
   font-size: 1.3rem;
+  text-align: center;
 }
