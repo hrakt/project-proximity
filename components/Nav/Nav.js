@@ -76,13 +76,13 @@ const Nav = () => {
             <ul className={styles.navItems}>
               {menuOptions.map((item, key) => {
                 return (
-                  <React.Fragment>
+                  <React.Fragment key={key}>
                     {key === 2 ? (
                       <a href={"/"}>
                         <SvgIcon icon="Logo" className={styles.logo} />
                       </a>
                     ) : null}
-                    <li key={key} className={styles.navItem}>
+                    <li className={styles.navItem}>
                       <Link href={item.href}>{item.title}</Link>
                     </li>
                   </React.Fragment>

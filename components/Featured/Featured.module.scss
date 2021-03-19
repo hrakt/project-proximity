@@ -91,6 +91,7 @@
 @include desktop {
   .item {
     width: 65%;
+    max-width: 900px;
     display: flex;
     justify-content: space-between;
     &__image {

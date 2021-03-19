@@ -12,7 +12,7 @@ const DefaultLayout = ({ children }) => {
       </Head>
 
       <Nav />
-      <main class="main">{children}</main>
+      <main>{children}</main>
       <Footer />
     </React.Fragment>
   );
