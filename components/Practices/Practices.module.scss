@@ -1,5 +1,77 @@
 @import "styles/colors.scss";
+@import "styles/breakpoints.scss";
 
 .container {
-  background-color: $offwhite;
+  margin: 4rem 0;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  width: 100%;
+  align-items: center;
+}
+
+.haederContainer {
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.practices {
+  display: flex;
+  flex-direction: column;
+}
+
+.practice {
+  margin-bottom: 3rem;
+  h3 {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.icon {
+  margin-bottom: 1.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+@include tablet {
+  .container {
+    align-items: flex-start;
+    padding: 0 8rem;
+    margin: 8rem 0;
+  }
+
+  .header {
+    max-width: 50rem;
+    margin-bottom: 6rem;
+  }
+
+  .practices {
+    flex-direction: row;
+  }
+
+  .practiceText {
+    max-width: 25.5rem;
+  }
+}
+
+@include desktop {
+  .container {
+    align-items: flex-start;
+    margin: 10rem 0;
+  }
+  .haederContainer {
+    max-width: 90rem;
+  }
+
+  .practiceText {
+    max-width: 30rem;
+  }
+
+  .container {
+    align-items: center;
+  }
 }
