@@ -12,7 +12,9 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <SvgIcon icon="Logo" className={styles.logo} />
+      <a href={"/"}>
+        <SvgIcon icon="Logo" className={styles.logo} />
+      </a>
       <ul className={styles.links}>
         {footerArr.map((link, key) => {
           return (
