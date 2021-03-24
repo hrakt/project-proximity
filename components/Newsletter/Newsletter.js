@@ -14,7 +14,7 @@ const Newsletter = ({}) => {
         <div className={styles.inputWrapper}>
           <input
             className={styles.emailInput}
-            placeholder="Yor email address"
+            placeholder="Your email address"
           ></input>
         </div>
         <Button theme="grey" className={styles.button}>
