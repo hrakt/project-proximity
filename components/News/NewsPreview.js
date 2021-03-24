@@ -1,6 +1,6 @@
 import Button from "../Button/index";
 
-import styles from "./News.module.scss";
+import styles from "./NewsPreview.module.scss";
 
 const News = ({}) => {
   const articleArr = [
