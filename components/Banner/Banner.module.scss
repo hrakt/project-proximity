@@ -1,0 +1,25 @@
+@import "styles/colors.scss";
+@import "styles/breakpoints.scss";
+
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.header {
+  font-size: 4rem;
+  color: $white;
+  text-transform: uppercase;
+}
+
+@include desktop {
+  .banner {
+    height: 30vh;
+  }
+  .header {
+    font-size: 5rem;
+  }
+}

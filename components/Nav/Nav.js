@@ -67,7 +67,7 @@ const Nav = () => {
               <a href="//www.facebook.com">
                 <SvgIcon icon="Facebook" className={styles.icon} />
               </a>
-              <a href={"//www.instagram.com"}>
+              <a href="//www.instagram.com">
                 <SvgIcon icon="Instagram" className={styles.icon} />
               </a>
             </div>
