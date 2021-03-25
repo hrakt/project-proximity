@@ -4,7 +4,7 @@ import styles from "./Practices.module.scss";
 
 const Practices = ({}) => {
   const practicesHeader =
-    "Our Pactices. What makes us stand out is the concious growing and development of our products.";
+    "Our Pactices. What makes us stand out is the conscious growing and development of our products.";
 
   const practicesArr = [
     {
