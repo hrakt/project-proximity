@@ -1,5 +1,6 @@
 import styles from "../Featured/Featured.module.scss";
 import cx from "classnames";
+import Button from "../Button";
 
 const Feautred = ({}) => {
   const featuredItems = [
@@ -40,6 +41,9 @@ const Feautred = ({}) => {
           </div>
         );
       })}
+      <Button className={styles.button} theme="grey">
+        View All
+      </Button>
     </div>
   );
 };
