@@ -27,12 +27,12 @@
   height: 30rem;
   width: 30rem;
   //   outline: solid;
-  margin-right: 1rem;
 }
 
 .image {
   height: 180px;
   width: auto;
+  margin-bottom: 1rem;
 }
 
 .articleText {
@@ -42,5 +42,8 @@
 @include tablet {
   .articles {
     flex-direction: row;
+  }
+  .article {
+    margin-right: 3rem;
   }
 }
