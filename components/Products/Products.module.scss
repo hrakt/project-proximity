@@ -1,0 +1,44 @@
+@import "styles/breakpoints.scss";
+@import "styles/colors.scss";
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 4rem 2rem;
+  background-color: $offwhite;
+}
+
+.image {
+  height: 180px;
+  width: auto;
+}
+
+@include tablet {
+  .products {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .image {
+    height: 140px;
+    width: auto;
+  }
+}
+
+@include desktop {
+  .products {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10rem 2rem;
+  }
+  .image {
+    height: 220px;
+    width: auto;
+  }
+}
