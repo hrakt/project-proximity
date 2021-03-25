@@ -16,7 +16,7 @@ const RetailerCount = ({ retailerCount, zipCode, setRadius }) => {
       {zipCode !== "" ? (
         <>
           <span>{retailerCount} retailers</span>
-          <select onChange={handleChange} class="select">
+          <select onChange={handleChange}>
             <option>10</option>
             <option>25</option>
             <option>50</option>
