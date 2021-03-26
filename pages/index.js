@@ -5,14 +5,31 @@ import Newsletter from "../components/Newsletter/Newsletter";
 import Practices from "../components/Practices";
 import DefaultLayout from "../layouts/DefaultLayout";
 
-export default function Home() {
+let client = require("contentful").createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+});
+
+export async function getStaticProps() {
+  let data = await client.getEntries({
+    content_type: "article",
+  });
+
+  return {
+    props: {
+      articles: data.items,
+    },
+  };
+}
+
+export default function Home({ articles }) {
   return (
     <div>
       <DefaultLayout>
         <Hero />
         <Feautred />
         <Practices />
-        <NewsPreview />
+        <NewsPreview articles={articles} />
         <Newsletter />
       </DefaultLayout>
     </div>

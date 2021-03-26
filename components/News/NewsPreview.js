@@ -1,8 +1,9 @@
 import Button from "../Button/index";
-
+import React, { useEffect, useState } from "react";
 import styles from "./NewsPreview.module.scss";
+import Image from "next/image";
 
-const News = ({}) => {
+const News = ({ articles }) => {
   const articleArr = [
     {
       image: "/product.jpg",
@@ -27,13 +28,15 @@ const News = ({}) => {
         <h2>Latest News</h2>
       </div>
       <div className={styles.articles}>
-        {articleArr.map((article, key) => {
+        {articles.map((article, key) => {
           return (
             <div className={styles.article} key={key}>
-              <img src={article.image} className={styles.image} />
+              <img
+                src={article.fields.image.fields.file.url}
+                className={styles.image}
+              />
               <div className={styles.articleText}>
-                <h3>{article.title}</h3>
-                <span>{article.content}</span>
+                <h3>{article.fields.title}</h3>
               </div>
             </div>
           );

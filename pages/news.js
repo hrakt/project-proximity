@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import DefaultLayout from "../layouts/DefaultLayout";
 
-export default function About() {
+export default function News() {
   return (
     <div>
       <DefaultLayout>
