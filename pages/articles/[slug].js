@@ -1,5 +1,6 @@
 import DefaultLayout from "../../layouts/DefaultLayout";
 import NewsArticle from "../../components/News/NewsArticle";
+import Banner from "../../components/Banner";
 
 let client = require("contentful").createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -35,6 +36,7 @@ export default function Article({ article }) {
   return (
     <div>
       <DefaultLayout>
+        <Banner header={article.fields.title} />
         <NewsArticle article={article} />
       </DefaultLayout>
     </div>
