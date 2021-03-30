@@ -1,18 +1,36 @@
 @import "styles/breakpoints.scss";
 @import "styles/colors.scss";
 
-.products {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.6rem;
+.wrapper {
   padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
   background-color: $offwhite;
+  font-size: 1.6rem;
 }
 
 .image {
-  height: 180px;
   width: auto;
+  height: 180px;
+}
+
+.productText {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.masonryGrid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -40px; /* gutter size offset */
+  width: auto;
+
+  &__column {
+    padding-left: 40px; /* gutter size */
+    background-clip: padding-box;
+  }
 }
 
 @include tablet {
