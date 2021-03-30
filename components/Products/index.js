@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Products.module.scss";
 import Masonry from "react-masonry-css";
+import Link from "next/link";
 
 const Products = () => {
   const productArr = [
@@ -22,7 +23,7 @@ const Products = () => {
       >
         {productArr.map((product, key) => {
           return (
-            <React.Fragment key={key}>
+            <Link href={"/"} key={key}>
               <div className={styles.product}>
                 <div className={styles.imageWrapper}>
                   <img src={product.img} className={styles.image} />
@@ -32,7 +33,7 @@ const Products = () => {
                   <h3>{product.name}</h3>
                 </div>
               </div>
-            </React.Fragment>
+            </Link>
           );
         })}
       </Masonry>

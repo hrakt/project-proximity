@@ -5,24 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const News = ({ articles }) => {
-  const articleArr = [
-    {
-      image: "/product.jpg",
-      title: "Lorem ipsum dolor sit amet.",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      image: "/product.jpg",
-      title: "Lorem ipsum dolor sit amet.",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      image: "/product.jpg",
-      title: "Lorem ipsum dolor sit amet.",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-  ];
-
   return (
     <div className={styles.container}>
       <div className={styles.hader}>
