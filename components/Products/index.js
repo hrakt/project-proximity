@@ -3,7 +3,8 @@ import styles from "./Products.module.scss";
 import Masonry from "react-masonry-css";
 import Link from "next/link";
 
-const Products = () => {
+const Products = ({ products }) => {
+  console.log(products);
   const productArr = [
     { name: "Oil", img: "/product.jpg" },
     { name: "Vape", img: "/product.jpg" },
@@ -21,16 +22,19 @@ const Products = () => {
         className={styles.masonryGrid}
         columnClassName={styles.masonryGrid__column}
       >
-        {productArr.map((product, key) => {
+        {products.map((product, key) => {
           return (
-            <Link href={"/"} key={key}>
+            <Link href={"/product/" + product.fields.slug} key={key}>
               <div className={styles.product}>
                 <div className={styles.imageWrapper}>
-                  <img src={product.img} className={styles.image} />
+                  <img
+                    src={product.fields.image.fields.file.url}
+                    className={styles.image}
+                  />
                 </div>
 
                 <div className={styles.productText}>
-                  <h3>{product.name}</h3>
+                  <h3>{product.fields.name}</h3>
                 </div>
               </div>
             </Link>
