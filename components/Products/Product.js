@@ -8,11 +8,10 @@ const Product = ({ product }) => {
   return (
     <div className={styles.product}>
       <div className={styles.imageWrapper}>
-        <Image
+        <img
+          className={styles.image}
           src={"https:" + product.fields.image.fields.file.url}
           alt="Picture of the author"
-          width={"500"}
-          height={"300"}
         />
       </div>
       <div className={styles.summary}>
@@ -22,7 +21,9 @@ const Product = ({ product }) => {
           {documentToReactComponents(product.fields.description)}
         </p>
         <div className={styles.buttons}>
-          <Button theme="grey">Find Product</Button>
+          <Button link="/locator" theme="grey">
+            Find Product
+          </Button>
         </div>
       </div>
     </div>
