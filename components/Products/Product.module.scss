@@ -1,0 +1,16 @@
+.product {
+  padding: 10rem;
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+}

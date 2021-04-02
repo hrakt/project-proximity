@@ -1,5 +1,5 @@
 import DefaultLayout from "../../layouts/DefaultLayout";
-import Overview from "../../components/Product/Overview";
+import Product from "../../components/Products/Product";
 import Banner from "../../components/Banner";
 
 let client = require("contentful").createClient({
@@ -32,12 +32,11 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function Product({ product }) {
-  console.log(product);
+export default function ProductPage({ product }) {
   return (
     <div>
       <DefaultLayout>
-        <Banner />
+        <Product product={product} />
       </DefaultLayout>
     </div>
   );

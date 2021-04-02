@@ -1,16 +1,9 @@
 import React from "react";
-import styles from "./Products.module.scss";
+import styles from "./Overview.module.scss";
 import Masonry from "react-masonry-css";
 import Link from "next/link";
 
 const Products = ({ products }) => {
-  console.log(products);
-  const productArr = [
-    { name: "Oil", img: "/product.jpg" },
-    { name: "Vape", img: "/product.jpg" },
-    { name: "Flower", img: "/product.jpg" },
-  ];
-
   return (
     <div className={styles.wrapper}>
       <Masonry

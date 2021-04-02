@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import Overview from "../components/Products";
+import Overiew from "../components/Products/Overiew";
 import DefaultLayout from "../layouts/DefaultLayout";
 import Newsletter from "../components/Newsletter/Newsletter";
 
@@ -25,7 +25,7 @@ export default function Products({ products }) {
     <div>
       <DefaultLayout>
         <Banner header="Products" />
-        <Overview products={products} />
+        <Overiew products={products} />
         <Newsletter />
       </DefaultLayout>
     </div>
