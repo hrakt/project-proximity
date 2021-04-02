@@ -41,7 +41,7 @@ const Feautred = ({}) => {
           </div>
         );
       })}
-      <Button className={styles.button} theme="grey">
+      <Button link="/products" className={styles.button} theme="grey">
         View All
       </Button>
     </div>

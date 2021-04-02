@@ -1,5 +1,6 @@
 import DefaultLayout from "../../layouts/DefaultLayout";
 import Product from "../../components/Products/Product";
+import Newsletter from "../../components/Newsletter/Newsletter";
 import Banner from "../../components/Banner";
 
 let client = require("contentful").createClient({
@@ -37,6 +38,7 @@ export default function ProductPage({ product }) {
     <div>
       <DefaultLayout>
         <Product product={product} />
+        <Newsletter />
       </DefaultLayout>
     </div>
   );
