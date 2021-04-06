@@ -4,6 +4,7 @@ import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
 import React from "react";
 import Modal from "../components/Modal";
+import Contact from "../components/Contact/Contact";
 
 const DefaultLayout = ({ children }) => {
   return (
@@ -14,6 +15,7 @@ const DefaultLayout = ({ children }) => {
 
       <Modal></Modal>
       <Nav />
+      <Contact />
       <main>{children}</main>
       <Footer />
     </React.Fragment>

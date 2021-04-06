@@ -2,12 +2,14 @@
 @import "styles/breakpoints.scss";
 
 .nav {
+  position: relative;
   height: 10rem;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  z-index: 100;
   box-shadow: 0 8px 12px 0 rgb(40 133 246 / 8%);
 }
 
@@ -116,7 +118,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 10;
+
   background-color: rgb(43, 43, 43);
   color: $white;
   display: flex;

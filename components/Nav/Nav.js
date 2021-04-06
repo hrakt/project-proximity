@@ -3,6 +3,7 @@ import cx from "classnames";
 import styles from "./Nav.module.scss";
 import Link from "next/link";
 import SvgIcon from "../SvgIcon/index";
+import Contact from "../Contact/Contact";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -102,6 +103,7 @@ const Nav = () => {
           </div>
         </div>
       </nav>
+      <Contact />
     </React.Fragment>
   );
 };
