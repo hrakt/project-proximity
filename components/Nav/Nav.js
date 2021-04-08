@@ -7,9 +7,14 @@ import Contact from "../Contact/Contact";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(true);
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleContact = (e) => {
+    console.log(e.target);
   };
 
   useEffect(() => {
@@ -83,9 +88,20 @@ const Nav = () => {
                         <SvgIcon icon="Logo" className={styles.logo} />
                       </a>
                     ) : null}
-                    <li className={styles.navItem}>
-                      <Link href={item.href}>{item.title}</Link>
-                    </li>
+                    {item.title === "Contact" ? (
+                      <li
+                        onClick={handleContact}
+                        onMouseEnter={() => setContactOpen(true)}
+                        onMouseLeave={() => setContactOpen(false)}
+                        className={styles.navItem}
+                      >
+                        {item.title}
+                      </li>
+                    ) : (
+                      <li className={styles.navItem}>
+                        <Link href={item.href}>{item.title}</Link>
+                      </li>
+                    )}
                   </React.Fragment>
                 );
               })}
@@ -103,7 +119,7 @@ const Nav = () => {
           </div>
         </div>
       </nav>
-      <Contact />
+      <Contact contactOpen={contactOpen} setContactOpen={setContactOpen} />
     </React.Fragment>
   );
 };

@@ -10,6 +10,7 @@
   align-items: center;
   width: 100%;
   z-index: 100;
+  background-color: white;
   box-shadow: 0 8px 12px 0 rgb(40 133 246 / 8%);
 }
 
@@ -30,6 +31,7 @@
   display: none;
   margin-right: 3rem;
   position: relative;
+  cursor: pointer;
 
   &:before {
     content: "";

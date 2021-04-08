@@ -2,6 +2,8 @@
 
 .contact {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   background-color: white;
@@ -10,18 +12,73 @@
   transform: translate(-50%, -50%);
   font-size: 1.6rem;
   z-index: 10;
+  visibility: hidden;
+}
+
+.header {
+  text-transform: uppercase;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+}
+
+.hours {
+  display: flex;
+  margin-top: 3rem;
+  div {
+    margin-right: 3rem;
+  }
+}
+
+.emailPhone {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  div {
+    margin-bottom: 1rem;
+  }
+}
+
+.address {
+  margin-top: 3rem;
+  max-width: 14rem;
+}
+
+.info {
+  max-width: 40rem;
+}
+
+.form {
+  input {
+    height: 4rem;
+    outline: hidden;
+    margin-bottom: 2rem;
+  }
 }
 
 @include desktop {
   .contact {
+    padding: 4rem 0;
     position: absolute;
-    display: flex;
+    visibility: visible;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     top: 0;
     left: 0;
     transform: translate(0, 0);
     width: 100%;
-    height: 30rem;
+    height: 40rem;
+    transform: translateY(-40rem);
+    transition: all 0.8s;
+  }
+  .contactOpen {
+    transform: translateY(10rem);
+    transition: all 0.8s;
   }
 }
